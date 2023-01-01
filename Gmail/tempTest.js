@@ -6,14 +6,14 @@ const gmailApisModule = require('./getGmailApis.js');
 
 async function someFunction() {
     const messageList = await gmailApisModule.getGmailResponce('drafts',null); //{q: "is:starred"} {q:"in:sent"}
-    // console.log(messageList["messages"][0]["id"]);
-    console.log(messageList)
-    // const randomIndex = Math.floor(Math.random() * messageList["messages"].length);
+    console.log(messageList["messages"][0]["id"]);
+    // console.log(messageList)
 
-    // const messagesI = await gmailApisModule.getGmailResponce(`messages/${messageList["messages"][0]["id"]}`, null)
-    // console.log(messagesI["payload"]["headers"]) //13 15 16 18 ["payload"]["headers"][13]
-    // const decodedString = Buffer.from(messagesI["payload"]["parts"][0]["body"]["data"], 'base64').toString('utf-8');
-    // console.log(decodedString) //["payload"]["headers"]
+
+    const messagesI = await gmailApisModule.getGmailResponce(`messages/${messageList["messages"][0]["id"]}`, null)
+    console.log(messagesI["payload"]["headers"]) //13 15 16 18 ["payload"]["headers"][13]
+    const decodedString = Buffer.from(messagesI["payload"]["parts"][0]["body"]["data"], 'base64').toString('utf-8');
+    console.log(decodedString) //["payload"]["headers"]
 }
 
 someFunction();
@@ -30,7 +30,7 @@ someFunction();
 // from - 16
 // { name: 'From', value: 'Notion <notify@mail.notion.so>' },
 
-// user mail - 18
+// user full mail - 18
 //  get text inside a mail - messagesI["payload"]["parts"][0]["body"]["data"] --> index [1] to get data in html format
 //                          const decodedString = Buffer.from(messagesI["payload"]["parts"][0]["body"]["data"], 'base64').toString('utf-8');
                           
