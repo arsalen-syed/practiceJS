@@ -1,6 +1,7 @@
 const request = require('request');
 
-async function authorize() {
+module.exports = {
+  authorize: async function() {
 //   const { client_secret, client_id } = credentials.json;
   const options = {
     method: 'POST',
@@ -29,14 +30,15 @@ async function authorize() {
     });
   });
 }
+};
 
-(async () => {
-  try {
-    const result = await authorize();
-    let access_token = result['access_token'];
-    console.log(access_token)
-  } catch (error) {
-    console.error(error);
-  }
-})();
+// (async () => {
+//   try {
+//     const result = await authorize();
+//     let access_token = result['access_token'];
+//     console.log(access_token)
+//   } catch (error) {
+//     console.error(error);
+//   }
+// })();
 
