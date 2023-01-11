@@ -14,10 +14,13 @@ async function getAccessToken(refreshToken) {
 // const accessToken = getAccessToken(refresh_token)
 
 
-async function main() {
-  refresh_token =  "1//0gUl06uvgZlHxCgYIARAAGBASNwF-L9IrDn4pBO6KFsBXo0F0Ct34cqJ5kRcCoJrbHjhElMJn7IZqh60SXqr-mzU3784qhJRYrro";
-  const accessToken = await getAccessToken(refresh_token);
-  console.log(accessToken);
-}
+// async function main() {
+//   refresh_token =  "1//0gUl06uvgZlHxCgYIARAAGBASNwF-L9IrDn4pBO6KFsBXo0F0Ct34cqJ5kRcCoJrbHjhElMJn7IZqh60SXqr-mzU3784qhJRYrro";
+//   const accessToken = await getAccessToken(refresh_token);
+//   console.log(accessToken);
+// }
 
-main();
+// main();
+
+
+// refresh_token=1%2F%2F0gUl06uvgZlHxCgYIARAAGBASNwF-L9IrDn4pBO6KFsBXo0F0Ct34cqJ5kRcCoJrbHjhElMJn7IZqh60SXqr-mzU3784qhJRYrro&client_id=935220894244-2bi98lpomkkghj042slh2m3j431o4emr.apps.googleusercontent.com&client_secret=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&grant_type=refresh_token',
